@@ -1,8 +1,17 @@
+import os
 from flask import Flask, request, session
 import auth, projectFuncts
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='../build', static_url_path='/')
 app.secret_key = "8ASD98345JHKLJHLKB^@HNB"
+
+@app.route('/')
+def index():
+    return app.send_static_file('index.html')
+
+@app.errorhandler(404)
+def not_found(e):
+    return app.send_static_file('index.html')
 
 @app.route('/auth', methods=['POST'])
 def authenticate_user():
@@ -110,4 +119,4 @@ def user():
         return {'status': 'error', 'msg': 'Please log in or sign up.',}
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', debug=False, port=os.environ.get('PORT', 80))
