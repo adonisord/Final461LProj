@@ -5,13 +5,13 @@ import auth, projectFuncts
 app = Flask(__name__, static_folder='../build', static_url_path='/')
 app.secret_key = "8ASD98345JHKLJHLKB^@HNB"
 
-@app.route('/')
-def index():
-    return app.send_static_file('index.html')
+# @app.route('/')
+# def index():
+#     return app.send_static_file('index.html')
 
-@app.errorhandler(404)
-def not_found(e):
-    return app.send_static_file('index.html')
+# @app.errorhandler(404)
+# def not_found(e):
+#     return app.send_static_file('index.html')
 
 @app.route('/auth', methods=['POST'])
 def authenticate_user():
