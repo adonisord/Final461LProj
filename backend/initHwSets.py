@@ -14,7 +14,6 @@ def initializeHardwareSets():
         for row in reader:
             initHwSets.append(row)
             i += 1
-    print(initHwSets)
     hwSets.insert_many(initHwSets)
 
 initializeHardwareSets()
