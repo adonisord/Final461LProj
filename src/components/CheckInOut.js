@@ -246,7 +246,7 @@ function CheckInOut(props) {
             </div>
           </div>
         </div>
-        <div className="col-2">
+        {/* <div className="col-2">
           <button
             onClick={updateJoinedStatus}
             type="button"
@@ -256,7 +256,7 @@ function CheckInOut(props) {
           >
             {JoinedText}
           </button>
-        </div>
+        </div> */}
       </div>
     </>
   );

@@ -52,11 +52,11 @@ function Navbar() {
                     My Projects
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link className="dropdown-item" to="/view-all-projects">
                     All Projects
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </li>
           </ul>
