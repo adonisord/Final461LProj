@@ -32,7 +32,7 @@ function SignUp(props) {
     .then((response) => response.json())
     .then((data) => {
       if(data['message'] === 'success') {
-        navigate('/view-all-projects');
+        navigate('/view-my-projects');
       } else {
         const errMsg = data['message']
         setShowModal(true)
